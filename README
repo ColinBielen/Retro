@@ -1,10 +1,23 @@
-This is the readme page for Retro.
+Intro: 
+
+Retro is an extremely lightweight client-side markup defintion framework and rendering engine allowing web developers to use custom sets of client-side markup definitions,as well as easily create their own. It also provides namespace-like support for allowing multiple custom markup languages to co-exist on a single page.
+
+Current Status:
+
+This project was really just me teaching myself jQuery and Prototype because I got sick of the front end engineers doing cooler things than I was doing in Java/Maven land. I also wanted to write something like custom tags that didn't need asynchronous server-side dependency. Bascially it's the FBML idea minus the "Facebook processing" step. 
+
+Road Map:
+
+- Proper Namespace Support: Jquery doesn't (appear to) have great namespace support so the engine's has to brute-force some pretty simple stuff. We should also be binding Makrup objects to namespace URI (rather than the actual prefix) so client code can assign whatever prefix they want to the tags.
+
+- Code Review: This was written over period of several hours by a deranged Java/Perl code who in addition to a full time engineering job was also contending with a newborn baby and grad school. There's probably more efficient ways do to some of the parsing.
 
 
-This is the description.
+Liscence:
+
+LGPL. See the "COPYING.LESSER" file in this project. 
 
 
-Here's an explanation of the demo.
+Author:
 
-
-Liscence info. Prolly LGPL
+Colin Bielen <colin dot bielen at gmail dot com>
