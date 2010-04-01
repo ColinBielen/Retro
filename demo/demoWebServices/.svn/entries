@@ -1,0 +1,40 @@
+8
+
+dir
+5630
+svn+ssh://colinb@quagmire.eonline.com/code/svn/ceg/interactive/platform/retro/trunk/demo/demoWebServices
+svn+ssh://colinb@quagmire.eonline.com/code/svn/ceg
+
+
+
+2009-08-06T23:22:47.822625Z
+5630
+colinb
+
+
+svn:special svn:externals svn:needs-lock
+
+blogWebService.xml
+file
+
+
+
+
+2009-08-03T23:52:17.000000Z
+8ab5dcf8b92302ca003e4c6c06b61251
+2009-08-06T23:22:47.822625Z
+5630
+colinb
+
+blogWebService.json
+file
+
+
+
+
+2009-08-03T23:44:37.000000Z
+708df6fe2da3f89e6f3528e70ecf815d
+2009-08-06T23:22:47.822625Z
+5630
+colinb
+

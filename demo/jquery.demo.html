@@ -1,0 +1,102 @@
+<xhtml xmlns="http://www.w3.org/1999/xhtml" 
+	   xmlns:demo="http://api.ceg.com/2009/cegml"
+	   xmlns:blah="http://api.ceg.com/2009/crapml"
+	   xml:lang="en" 
+	   lang="en" 
+	   attr="html">
+<head>
+<title>Retro Custom Markup Demo Page (jQuery)</title>
+<!--Generic jquery version 1.3.x -->
+<script src="jquery.js" language="javascript" type="text/javascript"></script>
+
+<!-- retro engine -->
+<script src="../retro.js" language="javascript" type="text/javascript"></script>
+
+<!-- "demo" Markup Definition and mapping -->
+<script src="jquery_demo_ml.js" language="javascript" type="text/javascript"></script>
+<!-- 2ndary Markup Definition and mapping -->
+<script src="jquery_demo_2.js" language="javascript" type="text/javascript"></script>
+
+</head>
+<body>
+<h1>Retro Custom Markup Demo Page (using jQuery)</h1>
+<br/>
+<h2> Setup</h2>
+Set up is easy. First include jquery.js:
+<pre>
+&lt;script src="jquery.js" language="javascript" type="text/javascript"&gt;&lt;/script&gt;
+
+</pre>
+
+Then the retro engine:
+<pre>
+&lt;script src="retro.js" language="javascript" type="text/javascript"&gt;&lt;/script&gt;
+
+</pre>
+
+Then include whatever markup languages you have. This demo page includes the following:
+<pre>
+
+&lt;script src="jquery_demo_ml.js" language="javascript" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script src="jquery_demo_2.js" language="javascript" type="text/javascript"&gt;&lt;/script&gt;
+
+</pre>
+
+<br/>
+<h2>Demo markup language tags: </h2>
+These tags and their functions are defined in <a href="jquery_demo_ml.js">jquery_demo_mlq.js</a>
+<br/>
+Here's the &lt;demo:helloworld&gt; tag passing "stranger" as the "name" attribute:<br/>
+<pre>
+<demo:helloworld 
+	name="stranger"></demo:helloworld>
+</pre>
+<br/><br/>
+
+Here's the &lt;demo:goodbyeworld&gt; tag passing "stranger" as the tag's "name" attribute:<br/>
+<pre>
+<demo:goodbyeworld 
+	name="stranger" ></demo:goodbyeworld>
+</pre>
+<br/>
+<br/>
+
+Here's a "&lt;demo:topstories&gt;" tag that calls a WebService via AJAX and renders the table from the AJAX response <a href="testServices/blogWebService.xml">xml</a>:
+<pre>
+<demo:topstories
+	number="10"
+	edition="us" ></demo:topstories>
+</pre>
+<br/>
+
+Here's the "&lt;demo:topstoriesasjson&gt;" tag. It calls the same WebService as above but uses <a href="demoWebServices/blogWebService.json">JSON</a>  instead of <a href="demoWebServices/blogWebService.xml">XML</a>. 
+<pre>
+<demo:topstoriesasjson
+	number="10"
+	edition="us"> </demo:topstoriesasjson>
+<br/>
+</pre>
+
+<h2>"other" markup language tags:</h2>
+These tags and their functions are mapped in the <a href="jquery_demo_2.js">jquery_demo_2.js</a> file. 
+<br/>
+<br/>
+
+Here's a differnt hello world tag called &lt;howdy&gt;<br/>
+<pre>
+<blah:howdy 
+	name="stranger"></blah:howdy>
+</pre>
+<br/><br/>
+
+
+Other markup languages can be defined in the same page as long as their <a href="blaml.js">markup definition</a> is registered to a different namespace. 
+</br>
+Here's a &lt;topstories&gt; tag from the "other" namespace:<br/>
+<pre>
+<blah:topstories></blah:topstories>
+</pre>
+<br/>
+<hr/>
+</body>
+</xhtml>

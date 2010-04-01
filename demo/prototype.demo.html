@@ -1,0 +1,82 @@
+<xhtml xmlns="http://www.w3.org/1999/xhtml" 
+	   xmlns:demo="http://api.ceg.com/2009/cegml"
+	   xmlns:blah="http://api.ceg.com/2009/crapml"
+	   xml:lang="en" 
+	   lang="en" 
+	   attr="html">
+<head>
+<title>Retro Custom Markup Demo Page (Prototype)</title>
+<!--Generic jquery version 1.3.x -->
+<script src="prototype.js" language="javascript" type="text/javascript"></script>
+
+<!-- retro engine -->
+<script src="../retro.js" language="javascript" type="text/javascript"></script>
+
+<!-- "pr" (prototype-based) Markup Definition and mapping -->
+<script src="prototype_demo_ml.js" language="javascript" type="text/javascript"></script>
+
+
+
+</head>
+<body>
+<h1>Retro Custom Markup Demo Page (using prototype)</h1>
+<br/>
+<h2> Setup</h2>
+Set up is easy. First include prototype.js:
+<pre>
+&lt;script src="jquery.js" language="javascript" type="text/javascript"&gt;&lt;/script&gt;
+
+</pre>
+
+Then the retro engine:
+<pre>
+&lt;script src="retro.js" language="javascript" type="text/javascript"&gt;&lt;/script&gt;
+
+</pre>
+
+Then include whatever markup languages you have. This demo page includes the following:
+<pre>
+
+&lt;script src="prototype_demo_ml.js" language="javascript" type="text/javascript"&gt;&lt;/script&gt;
+
+</pre>
+
+<br/>
+<h2>Demo markup language tags: </h2>
+These tags and their functions are defined in <a href="prototypeml.js">prototypeml.js</a>
+<br/>
+Here's the &lt;demo:helloworld&gt; tag passing "stranger" as the "name" attribute:<br/>
+<pre>
+<demo:helloworld 
+	name="stranger"></demo:helloworld>
+</pre>
+<br/><br/>
+
+Here's the &lt;demo:goodbyeworld&gt; tag passing "stranger" as the tag's "name" attribute:<br/>
+<pre>
+<demo:goodbyeworld 
+	name="stranger" ></demo:goodbyeworld>
+</pre>
+<br/>
+<br/>
+
+Here's a "&lt;demo:topstories&gt;" tag that calls a WebService via AJAX and renders the table from the AJAX response <a href="testServices/blogWebService.xml">xml</a>:
+<pre>
+<demo:topstories
+	number="10"
+	edition="us" ></demo:topstories>
+</pre>
+<br/>
+
+Here's the "&lt;demo:topstoriesasjson&gt;" tag. It calls the same WebService as above but uses <a href="testServices/blogWebService.json">JSON</a>  instead of <a href="testServices/blogWebService.xml">XML</a>. 
+<pre>
+<demo:topstoriesasjson
+	number="10"
+	edition="us"> </demo:topstoriesasjson>
+<br/>
+</pre>
+
+<br/>
+<hr/>
+</body>
+</xhtml>
